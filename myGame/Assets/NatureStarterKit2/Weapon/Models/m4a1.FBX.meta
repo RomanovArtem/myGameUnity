@@ -247,6 +247,8 @@ ModelImporter:
     7400038: unload_clip_load_first
     7400040: load_second_loop
     7400042: "load_clip\t"
+    7400044: shoot_
+    7400046: load_clip_
     9500000: //RootNode
     13700000: hand
     13700002: m4a1_aim
@@ -256,7 +258,22 @@ ModelImporter:
     13700010: m4a1_mag
     13700012: m4a1_scope
     13700014: m4a1_silencer
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 154279b23022423479353b4351ec678d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hand_mat
+    second: {fileID: 2100000, guid: f4dbf2fefeb30964da2c8501b058519d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m4a1_mat
+    second: {fileID: 2100000, guid: 0e733db068816f249aa6e0c0c8cf4159, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

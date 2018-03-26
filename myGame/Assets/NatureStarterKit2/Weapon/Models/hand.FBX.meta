@@ -165,9 +165,16 @@ ModelImporter:
     7400018: eat
     7400020: "pick_up\t"
     7400022: drop
+    7400024: run_
+    7400026: pick_up_
     9500000: //RootNode
     13700000: hand
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hand_mat
+    second: {fileID: 2100000, guid: f4dbf2fefeb30964da2c8501b058519d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

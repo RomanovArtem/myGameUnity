@@ -226,6 +226,7 @@ ModelImporter:
     7400038: unload_clip_load_first
     7400040: load_second_loop
     7400042: load_clip
+    7400044: zoom_out_
     9500000: //RootNode
     13700000: hand
     13700002: m107
@@ -233,7 +234,17 @@ ModelImporter:
     13700006: m107_biullet_02
     13700008: m107_mag
     13700010: m107_scope
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hand_diff
+    second: {fileID: 2100000, guid: f4dbf2fefeb30964da2c8501b058519d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m107_diff
+    second: {fileID: 2100000, guid: aa69961665166d1438e8fd42b0c83292, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
