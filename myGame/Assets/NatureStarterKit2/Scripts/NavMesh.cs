@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -44,11 +45,11 @@ public class NavMesh : MonoBehaviour
 
         var distance = CalculationDistance(aX, aY, aZ, tX, tY, tZ);
         /// бег
-        if (distance <= 20 && distance > 10)
+        if (distance <= 20 && distance > 8)
         {
             animator.SetFloat("Speed", 4);
             animator.SetFloat("Directional", 1);
-            agent.speed = 8;
+            agent.speed = 9;
         }
         /// бастрая ходьба
         else if (distance <= 30 && distance > 20)
@@ -64,14 +65,14 @@ public class NavMesh : MonoBehaviour
             animator.SetFloat("Directional", 1);
             agent.speed = 4;
         }
-
-        // остановка
-        else if (distance <= 10)
+        // атака
+        else if (distance <= 8)
         {
-            agent.speed = 0;
-            animator.SetFloat("Speed", 1);
+            agent.speed = 2;
+            animator.SetFloat("Speed", 5);
             animator.SetFloat("Directional", 1);
         }
+
 
         System.Diagnostics.Debug.WriteLine(distance);
     }
