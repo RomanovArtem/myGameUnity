@@ -44,27 +44,53 @@ public class NavMesh : MonoBehaviour
         #endregion
 
         var distance = CalculationDistance(aX, aY, aZ, tX, tY, tZ);
+        ///// бег
+        //if (distance <= 20 && distance > 8)
+        //{
+        //    animator.SetFloat("Speed", 4);
+        //    animator.SetFloat("Directional", 1);
+        //    agent.speed = 9;
+        //}
+        ///// бастрая ходьба
+        //else if (distance <= 30 && distance > 20)
+        //{
+        //    animator.SetFloat("Speed", 3);
+        //    animator.SetFloat("Directional", 1);
+        //    agent.speed = 6;
+        //}
+        ///// обычная ходьба
+        //else if (distance > 30)
+        //{
+        //    animator.SetFloat("Speed", 2.1f);
+        //    animator.SetFloat("Directional", 1);
+        //    agent.speed = 4;
+        //}
+        //// атака
+        //else if (distance <= 8)
+        //{
+        //    agent.speed = 2;
+        //    animator.SetFloat("Speed", 5);
+        //    animator.SetFloat("Directional", 1);
+        //}
+
+
+        /// теперь бег и ходьба
+        
         /// бег
-        if (distance <= 20 && distance > 8)
+        if (distance <= 30 && distance > 8)
         {
             animator.SetFloat("Speed", 4);
             animator.SetFloat("Directional", 1);
             agent.speed = 9;
         }
         /// бастрая ходьба
-        else if (distance <= 30 && distance > 20)
+        else if (distance > 30)
         {
-            animator.SetFloat("Speed", 3);
+            animator.SetFloat("Speed", 3.5f);
             animator.SetFloat("Directional", 1);
             agent.speed = 6;
         }
-        /// обычная ходьба
-        else if (distance > 30)
-        {
-            animator.SetFloat("Speed", 2.1f);
-            animator.SetFloat("Directional", 1);
-            agent.speed = 4;
-        }
+        
         // атака
         else if (distance <= 8)
         {
