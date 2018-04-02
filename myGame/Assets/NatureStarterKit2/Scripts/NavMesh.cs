@@ -23,9 +23,12 @@ public class NavMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
+        if (agent != null)
+        {
+            agent.SetDestination(target.position);
+            ChangeSpeed();
 
-        ChangeSpeed();
+        }
     }
 
     /// <summary>
@@ -75,7 +78,7 @@ public class NavMesh : MonoBehaviour
 
 
         /// теперь бег и ходьба
-        
+
         /// бег
         if (distance <= 30 && distance > 8)
         {
@@ -90,7 +93,7 @@ public class NavMesh : MonoBehaviour
             animator.SetFloat("Directional", 1);
             agent.speed = 6;
         }
-        
+
         // атака
         else if (distance <= 8)
         {
