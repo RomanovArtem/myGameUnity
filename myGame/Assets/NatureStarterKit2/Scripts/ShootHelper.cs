@@ -6,65 +6,39 @@ using UnityEngine;
 public class ShootHelper : MonoBehaviour
 {
     /// <summary>
-    /// аниматор
+    /// откуда стреляем
     /// </summary>
-    public Animator _anim;
-
-    public bool _shooting = false;
-
-    public LineRenderer _shootLine;
+    public Transform _spawn;
 
     /// <summary>
-    /// координаты, откуда будет вылет пули
+    /// свет от выстрела
     /// </summary>
-    public Transform _shootTransform;
+    public GameObject _point;
 
 
     // Use this for initialization
     void Start()
     {
-        _anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")/* && !Input.GetKey(KeyCode.LeftShift)*/)
+        if (Input.GetMouseButtonDown(0))
         {
-            //_anim.SetTrigger("Fire1");
-            _shootLine.enabled = true;
-            _shooting = true;
-        }
-    }
-
-    void FixedUpdate()
-    {
-        if (_shooting)
-        {
-            _shooting = false;
+            Ray ray = new Ray(_spawn.position, _spawn.forward * 10f);
             RaycastHit hit;
-            _shootLine.SetPosition(0, _shootTransform.position);
-
-            // есть попадение 
-            if (Physics.Raycast(_shootTransform.position, -_shootTransform.right, out hit, 50f))
+            /// если попали
+            if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.point);
-                _shootLine.SetPosition(1, hit.point);
+                _point.GetComponent<Light>().enabled = true;
+                _point.GetComponent<Light>().enabled = false;
+                Rigidbody rigidbody = hit.transform.gameObject.GetComponent<Rigidbody>();
+                if (rigidbody != null)
+                {
+                    rigidbody.AddForceAtPosition(-hit.normal * 1000f, hit.point);
+                }
             }
-            else
-            {
-                _shootLine.SetPosition(1, _shootTransform.position + transform.forward * 50f);
-
-            }
-
-            // скрывание линии
-           // StartCoroutine(HideLine());
         }
-    }
-
-    private IEnumerator HideLine()
-    {
-        yield return new WaitForSeconds(0.1f); /// 100 млс
-        _shootLine.enabled = false;
     }
 }
