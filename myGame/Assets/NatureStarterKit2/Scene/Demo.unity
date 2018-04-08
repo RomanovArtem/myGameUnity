@@ -11598,6 +11598,11 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 616889679}
+    - target: {fileID: 95516466086666904, guid: 32d3aaeecc7359b438b5986d53b28483,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32d3aaeecc7359b438b5986d53b28483, type: 2}
   m_IsPrefabParent: 0
@@ -21168,7 +21173,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779594192}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.2
   m_Height: 1.5

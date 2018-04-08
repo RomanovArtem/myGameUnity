@@ -15,7 +15,8 @@ public class HealthEnemy : MonoBehaviour
         HP -= damage;
         if (HP <= 0)
         {
-            Destroy(gameObject);
+            GetComponent<NavMesh>().DeathEnemy();
+            //Destroy(gameObject);
         }
     }
 }

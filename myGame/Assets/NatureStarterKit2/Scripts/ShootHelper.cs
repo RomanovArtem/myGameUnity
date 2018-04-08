@@ -38,6 +38,7 @@ public class ShootHelper : MonoBehaviour
                 {
                     var damage = 25;
                     hit.transform.GetComponent<HealthEnemy>().AddDamage(damage);
+
                 }
             }
         }
