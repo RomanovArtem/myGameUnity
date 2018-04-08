@@ -9,8 +9,10 @@ public class NavMesh : MonoBehaviour
 {
 
     public Transform target; // куда будет идти враг
-    NavMeshAgent agent;
+
+    NavMeshAgent agent = null;
     Animator animator;
+
 
     // Use this for initialization
     void Start()
@@ -27,7 +29,6 @@ public class NavMesh : MonoBehaviour
         {
             agent.SetDestination(target.position);
             ChangeSpeed();
-
         }
     }
 

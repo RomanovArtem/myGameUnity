@@ -3638,6 +3638,23 @@ Transform:
   m_Father: {fileID: 984593360}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &329965648 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1711150987212824, guid: 32d3aaeecc7359b438b5986d53b28483,
+    type: 2}
+  m_PrefabInternal: {fileID: 966233614}
+--- !u!114 &329965655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 329965648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3b17c7b10cd1c41bb7ed51aafc4c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 300
 --- !u!4 &330622013 stripped
 Transform:
   m_PrefabParentObject: {fileID: 442488, guid: ec78ebca7517fb745a45a931cb06d2bd, type: 2}
@@ -6404,7 +6421,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2222
+  m_Text: 
 --- !u!222 &566259093
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21097,10 +21114,11 @@ GameObject:
   - component: {fileID: 1779594197}
   - component: {fileID: 1779594196}
   - component: {fileID: 1779594195}
-  - component: {fileID: 1779594194}
   - component: {fileID: 1779594193}
   - component: {fileID: 1779594198}
   - component: {fileID: 1779594199}
+  - component: {fileID: 1779594194}
+  - component: {fileID: 1779594200}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -21133,8 +21151,7 @@ NavMeshAgent:
 --- !u!114 &1779594194
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114697658659070760, guid: 70bb738364b01e343abdcc305b98144b,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779594192}
   m_Enabled: 1
@@ -21218,6 +21235,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1779594200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779594192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3b17c7b10cd1c41bb7ed51aafc4c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 500
 --- !u!1 &1782825382
 GameObject:
   m_ObjectHideFlags: 0

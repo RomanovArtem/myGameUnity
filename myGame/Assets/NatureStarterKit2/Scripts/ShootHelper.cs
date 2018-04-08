@@ -31,12 +31,13 @@ public class ShootHelper : MonoBehaviour
             /// если попали
             if (Physics.Raycast(ray, out hit))
             {
-                _point.GetComponent<Light>().enabled = true;
-                _point.GetComponent<Light>().enabled = false;
+                _point.GetComponent<Light>().enabled = true; //
+                _point.GetComponent<Light>().enabled = false; //
                 Rigidbody rigidbody = hit.transform.gameObject.GetComponent<Rigidbody>();
                 if (rigidbody != null)
                 {
-                    rigidbody.AddForceAtPosition(-hit.normal * 1000f, hit.point);
+                    var damage = 25;
+                    hit.transform.GetComponent<HealthEnemy>().AddDamage(damage);
                 }
             }
         }
