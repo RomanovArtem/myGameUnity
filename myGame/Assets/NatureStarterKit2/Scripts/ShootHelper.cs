@@ -15,6 +15,8 @@ public class ShootHelper : MonoBehaviour
     /// </summary>
     public GameObject _point;
 
+    public AmmoPlayer ammoPlayer;
+
 
     // Use this for initialization
     void Start()
@@ -24,7 +26,7 @@ public class ShootHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && (ammoPlayer.NumberBulletsInStore + ammoPlayer.AmmoCount) > 0)
         {
             Ray ray = new Ray(_spawn.position, _spawn.forward * 10f);
             RaycastHit hit;
@@ -41,6 +43,8 @@ public class ShootHelper : MonoBehaviour
 
                 }
             }
+
+            ammoPlayer.NumberBulletsInStore--;
         }
     }
 }
