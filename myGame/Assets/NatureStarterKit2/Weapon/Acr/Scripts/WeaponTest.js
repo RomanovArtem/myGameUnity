@@ -2,11 +2,11 @@
 var fireLeftAnim : String = "Fire";
 var reloadAnim : String = "Reload";
 var animationGO : GameObject;
-var Ammo : GameObject;
  
 private var drawWeapon : boolean = false;
 private var reloading : boolean = false;
 
+private var Ammo : int = 30;
 
  
 function Start (){
@@ -17,9 +17,11 @@ function Update (){
  
     if(Input.GetButtonDown ("Fire1") && reloading == false && drawWeapon == false){
         Fire();
+		Ammo--;
         }
-        if (Input.GetKeyDown ("r") && reloading == false && drawWeapon == false || Ammo.NumberBulletsInStore == 0){
+        if (Input.GetKeyDown ("r") && reloading == false && drawWeapon == false || Ammo == 0){
     Reloading();
+	Ammo = 30;
         }
        
         if (Input.GetKeyDown ("1") && reloading == false){

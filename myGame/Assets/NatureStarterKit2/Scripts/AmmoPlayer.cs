@@ -32,6 +32,8 @@ public class AmmoPlayer : MonoBehaviour
     void Update()
     {
         Reloading();
+        if (NumberBulletsInStore < 0) NumberBulletsInStore = 0;
+        if (AmmoCount < 0) AmmoCount = 0;
         _amountAmmo.text = NumberBulletsInStore + " / " + AmmoCount;
     }
 
@@ -57,13 +59,13 @@ public class AmmoPlayer : MonoBehaviour
     {
         var temp = 30 - NumberBulletsInStore;
 
-        if (AmmoCount - temp >= 0 )
+        if (AmmoCount - temp >= 0)
         {
             NumberBulletsInStore += temp;
             AmmoCount -= temp;
         }
 
-        else if (AmmoCount - temp < 0 )
+        else if (AmmoCount - temp < 0)
         {
             NumberBulletsInStore += AmmoCount;
             AmmoCount = 0;
