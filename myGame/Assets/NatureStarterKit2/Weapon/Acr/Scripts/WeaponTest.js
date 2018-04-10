@@ -2,6 +2,12 @@
 var fireLeftAnim : String = "Fire";
 var reloadAnim : String = "Reload";
 var animationGO : GameObject;
+/// звук выстрела
+var ShootSound : AudioClip;
+
+/// звук перезарядки
+var ReloadSound : AudioClip;
+
  
 private var drawWeapon : boolean = false;
 private var reloading : boolean = false;
@@ -16,12 +22,14 @@ DrawWeapon();
 function Update (){
  
     if(Input.GetButtonDown ("Fire1") && reloading == false && drawWeapon == false){
-        Fire();
+	    Fire();
 		Ammo--;
+		PlayShootSound();
         }
         if (Input.GetKeyDown ("r") && reloading == false && drawWeapon == false || Ammo == 0){
-    Reloading();
-	Ammo = 30;
+		PlayReloadSound();
+		Reloading();
+		Ammo = 30;
         }
        
         if (Input.GetKeyDown ("1") && reloading == false){
@@ -51,4 +59,16 @@ function Reloading(){
         reloading = true;
         yield WaitForSeconds(2.0);
         reloading = false;
+}
+
+/// воспроизвести звук выстрела
+function PlayShootSound() {
+	gameObject.GetComponent.<AudioSource>().clip = ShootSound;
+    gameObject.GetComponent.<AudioSource>().Play();
+}
+
+/// воспроизвести звук перезарядки
+function PlayReloadSound() {
+	gameObject.GetComponent.<AudioSource>().clip = ReloadSound;
+    gameObject.GetComponent.<AudioSource>().Play();
 }

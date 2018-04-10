@@ -33,7 +33,7 @@ public class AmmoPlayer : MonoBehaviour
     {
         Reloading();
         if (NumberBulletsInStore < 0) NumberBulletsInStore = 0;
-        if (AmmoCount < 0) AmmoCount = 0;
+        if (AmmoCount < 0) AmmoCount    = 0;
         _amountAmmo.text = NumberBulletsInStore + " / " + AmmoCount;
     }
 

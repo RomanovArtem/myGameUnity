@@ -15,7 +15,15 @@ public class ShootHelper : MonoBehaviour
     /// </summary>
     public GameObject _point;
 
+    /// <summary>
+    /// кол-во патронов и магазине и всего
+    /// </summary>
     public AmmoPlayer ammoPlayer;
+
+    /// <summary>
+    /// звук выстрела
+    /// </summary>
+    public AudioClip ShotSound;
 
 
     // Use this for initialization
@@ -46,5 +54,14 @@ public class ShootHelper : MonoBehaviour
 
             ammoPlayer.NumberBulletsInStore--;
         }
+    }
+
+    /// <summary>
+    /// воспроизвести звук выстрела
+    /// </summary>
+    public void PlayShootSound()
+    {
+        gameObject.GetComponent<AudioSource>().clip = ShotSound;
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }

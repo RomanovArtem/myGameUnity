@@ -609,6 +609,8 @@ GameObject:
   - component: {fileID: 114972474332194704}
   - component: {fileID: 195457878590192708}
   - component: {fileID: 54143799637410210}
+  - component: {fileID: 114631106412890528}
+  - component: {fileID: 114429448295452114}
   m_Layer: 0
   m_Name: SPIDER
   m_TagString: Untagged
@@ -1645,6 +1647,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114429448295452114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711150987212824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3b17c7b10cd1c41bb7ed51aafc4c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 300
+--- !u!114 &114631106412890528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711150987212824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3700cba8ef64a4da0b168710c2f00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _valueDown: 10
 --- !u!114 &114761010983673360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1676,7 +1702,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711150987212824}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.05
   m_Height: 0.05
