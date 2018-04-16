@@ -11,6 +11,7 @@ var ReloadSound : AudioClip;
  
 private var drawWeapon : boolean = false;
 private var reloading : boolean = false;
+private var GameIsPaused : boolean = false;	
 
 private var Ammo : int = 30;
 
@@ -21,6 +22,8 @@ DrawWeapon();
  
 function Update (){
  
+ if (!GameIsPaused)
+ {
     if(Input.GetButtonDown ("Fire1") && reloading == false && drawWeapon == false){
 	    Fire();
 		Ammo--;
@@ -34,7 +37,17 @@ function Update (){
        
         if (Input.GetKeyDown ("1") && reloading == false){
         DrawWeapon();
-        }      
+        } 
+	}
+
+	if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused) {
+		GameIsPaused = true;
+		return;
+	}
+	if (Input.GetKeyDown(KeyCode.Escape) && GameIsPaused) {
+		GameIsPaused = false;
+		return;
+	}
 }
  
 function Fire(){
