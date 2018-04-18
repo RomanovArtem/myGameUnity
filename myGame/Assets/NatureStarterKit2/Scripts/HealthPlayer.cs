@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthPlayer : MonoBehaviour
+public class HealthPlayer    : MonoBehaviour
 {
     /// <summary>
     /// здоровье персонажа

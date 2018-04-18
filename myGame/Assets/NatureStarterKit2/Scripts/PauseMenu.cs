@@ -50,11 +50,12 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
-        GetComponent<FirstPersonController>().enabled = true;
         Spawn.GetComponent<ShootHelper>().enabled = true;
         Weapon.GetComponent<AudioSource>().enabled = true;
+        Weapon.GetComponent<WeaponScript>().enabled = true;
         GetComponent<AmmoPlayer>().enabled = true;
         Cursor.visible = false;
+        GetComponent<FirstPersonController>().enabled = true;
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -68,6 +69,7 @@ public class PauseMenu : MonoBehaviour
         GetComponent<FirstPersonController>().enabled = false;
         Spawn.GetComponent<ShootHelper>().enabled = false;
         Weapon.GetComponent<AudioSource>().enabled = false;
+        Weapon.GetComponent<WeaponScript>().enabled = false;
         GetComponent<AmmoPlayer>().enabled = false;
         Cursor.visible = true;
         Time.timeScale = 0f;

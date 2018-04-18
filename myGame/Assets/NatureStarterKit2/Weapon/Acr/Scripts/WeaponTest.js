@@ -13,6 +13,7 @@ private var drawWeapon : boolean = false;
 private var reloading : boolean = false;
 private var GameIsPaused : boolean = false;	
 
+private var AllAmmo : int = 150;
 private var Ammo : int = 30;
 
  
@@ -24,12 +25,14 @@ function Update (){
  
  if (!GameIsPaused)
  {
-    if(Input.GetButtonDown ("Fire1") && reloading == false && drawWeapon == false){
+    if(Input.GetButtonDown ("Fire1") && reloading == false && drawWeapon == false && AllAmmo !=0){
 	    Fire();
 		Ammo--;
+		AllAmmo--;
 		PlayShootSound();
         }
-        if (Input.GetKeyDown ("r") && reloading == false && drawWeapon == false || Ammo == 0){
+        if (Input.GetKeyDown ("r") && reloading == false && drawWeapon == false && AllAmmo != 0 || Ammo <= 0 && AllAmmo !=0){
+		GameIsPaused = false;
 		PlayReloadSound();
 		Reloading();
 		Ammo = 30;
@@ -41,13 +44,18 @@ function Update (){
 	}
 
 	if (Input.GetKeyDown(KeyCode.Escape) && !GameIsPaused) {
-		GameIsPaused = true;
+		InvertBool();
 		return;
 	}
 	if (Input.GetKeyDown(KeyCode.Escape) && GameIsPaused) {
-		GameIsPaused = false;
+		InvertBool();
 		return;
 	}
+}
+
+function InvertBool(){
+	if(GameIsPaused) GameIsPaused = false;
+	else if(!GameIsPaused) GameIsPaused = true;
 }
  
 function Fire(){
