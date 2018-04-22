@@ -242,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\NatureStarterKit2\Scripts\AmmoPlayer.cs" />
-    <Compile Include="Assets\NatureStarterKit2\Scripts\AppearanceEnemies.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\HealthEnemy.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\HealthPlayer.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\HealthTriggerUI.cs" />

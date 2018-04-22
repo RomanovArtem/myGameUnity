@@ -60,7 +60,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-5c57f011587b34477105d987caee282b Assembly-CSharp.dll:.ScreensaverLevel
+0e08c749726808a0bf2f91748e35d0f3 Assembly-CSharp.dll:.ScreensaverLevel
 8e9f5b922979e9356a11d2ee2b32ee60 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -196,7 +196,6 @@ b900ead596b2fb1093b31cb63a678767 Assembly-CSharp.dll:TMPro.Examples.TextMeshProF
 88e745da281bc889e248b64cf4d72a54 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.SunShafts
 a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.ButtonHandler
 83877f03b51b3b13fa0d6c51291e0575 Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.HeadBob
-04e76ff6bf7d91f4f73ed08997d9e838 Assembly-CSharp.dll:.AppearanceEnemies
 dad1c1272dfe1898bb613dcb2631bcce Assembly-CSharp.dll:TMPro.Examples.Benchmark02
 a90e94673f50d2237c1b971c138660c6 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMoveAndRotate
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ForcedReset
@@ -231,6 +230,7 @@ cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp.dll:UnityStandardAssets.ImageEf
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.PostEffectsHelper
 76015de5fcb247eeb8df66c001d5a22d Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 b8f04bdad423045528c67dfa4c3dca0d Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
+13346029250ae726623285f3e209bab4 Assembly-CSharp.dll:.WeaponScript
 2e7c262852dd1c32ab7b11759a1d1b1e Assembly-CSharp.dll:.ShootHelper
 b26b3a55de2a8cbeee573d45c8848f09 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.ScreenSpaceAmbientOcclusion
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -307,4 +307,3 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp.dll:UnityStandardAssets.ImageEf
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-13346029250ae726623285f3e209bab4 Assembly-CSharp.dll:.WeaponScript

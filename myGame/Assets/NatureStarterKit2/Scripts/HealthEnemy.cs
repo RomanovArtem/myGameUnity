@@ -16,7 +16,15 @@ public class HealthEnemy : MonoBehaviour
         if (HP <= 0)
         {
             GetComponent<NavMesh>().DeathEnemy();
-            //Destroy(gameObject);
+            ScreensaverLevel.CountDeadEnemies++;
+            if (ScreensaverLevel.CountDeadEnemies == ScreensaverLevel.CountDeadEnemies) Destroy(gameObject);
+            InvokeRepeating("DestroyObject", 5f, 3f);
         }
     }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
+
 }
