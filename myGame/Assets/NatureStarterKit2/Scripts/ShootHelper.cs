@@ -20,6 +20,13 @@ public class ShootHelper : MonoBehaviour
     /// </summary>
     public AmmoPlayer ammoPlayer;
 
+    /// <summary>
+    /// свет от выстрела
+    /// </summary>
+    public GameObject _shootLight;
+
+    private float _shootLightTime = 0.0f;
+
     // Use this for initialization
     void Start()
     {
@@ -28,8 +35,16 @@ public class ShootHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_shootLightTime > 0)
+        {
+            _shootLightTime -= 0.1f;
+            _shootLight.SetActive(false);
+        }
+
         if (Input.GetMouseButtonDown(0) && (ammoPlayer.NumberBulletsInStore + ammoPlayer.AmmoCount) > 0)
         {
+            _shootLight.SetActive(true);
+            _shootLightTime = 0.2f;
             Ray ray = new Ray(_spawn.position, _spawn.forward * 10f);
             RaycastHit hit;
             /// если попали
