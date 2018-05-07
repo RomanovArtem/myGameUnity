@@ -170,7 +170,7 @@ public class ScreensaverLevel : MonoBehaviour
         while (temp <= CountEnemiesPrefab)
         {
             ZombieObject.SetActive(true);
-            Rigidbody ZombieClone = Instantiate(ZombiePrefab, new Vector3(Random.Range(-70f, 80f), 2, Random.Range(-80f, 70f)), Quaternion.Euler(0, 90, 0)) as Rigidbody;
+            Rigidbody ZombieClone = Instantiate(ZombiePrefab, new Vector3(Random.Range(-60f, 70f), 1, Random.Range(-70f, 60f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
             ZombieClone.velocity = new Vector3(0, 0, 1);
             temp++;
         }
