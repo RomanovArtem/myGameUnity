@@ -4285,6 +4285,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 393b236c42954a640b513d46de90ac38, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &336649397 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1711150987212824, guid: 32d3aaeecc7359b438b5986d53b28483,
+    type: 2}
+  m_PrefabInternal: {fileID: 211959680}
+--- !u!54 &336649400 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 54143799637410210, guid: 32d3aaeecc7359b438b5986d53b28483,
+    type: 2}
+  m_PrefabInternal: {fileID: 211959680}
 --- !u!1001 &337669912
 Prefab:
   m_ObjectHideFlags: 0
@@ -8962,7 +8972,7 @@ Light:
   m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.28845, g: 0.26384082, b: 0.58823526, a: 1}
   m_Intensity: 0.71
   m_Range: 403.81
   m_SpotAngle: 30
@@ -25662,6 +25672,8 @@ MonoBehaviour:
   CurrentLevel: 1
   ZombiePrefab: {fileID: 1744526096}
   ZombieObject: {fileID: 728927784}
+  SpiderPrefab: {fileID: 336649400}
+  SpiderObject: {fileID: 336649397}
 --- !u!4 &1743121641 stripped
 Transform:
   m_PrefabParentObject: {fileID: 429508, guid: 9c74caa742791864f9c678287121e6c9, type: 2}

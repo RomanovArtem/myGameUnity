@@ -72,9 +72,22 @@ public class ScreensaverLevel : MonoBehaviour
     public GameObject ZombieObject;
 
     /// <summary>
+    /// превфаб паук
+    /// </summary>
+    public Rigidbody SpiderPrefab;
+
+    /// <summary>
+    /// объект паук
+    /// </summary>
+    public GameObject SpiderObject;
+
+    /// <summary>
     /// кол-во убитых врагов
     /// </summary>
     public static int CountDeadEnemies { get; set; }
+
+    SaveSettings a = new SaveSettings();
+
 
     // Use this for initialization
     void Start()
@@ -177,6 +190,23 @@ public class ScreensaverLevel : MonoBehaviour
     }
 
     /// <summary>
+    /// создание пауков
+    /// </summary>
+    public void CreateSpiderPrefab()
+    {
+        float b = SaveSettings._selectedVolume;
+
+        int temp = 0;
+        while (temp <= CountEnemiesPrefab)
+        {
+            SpiderObject.SetActive(true);
+            Rigidbody SpiderClone = Instantiate(SpiderPrefab, new Vector3(Random.Range(-60f, 70f), 1, Random.Range(-70f, 60f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
+            SpiderClone.velocity = new Vector3(0, 0, 1);
+            temp++;
+        }
+    }
+
+    /// <summary>
     /// по таймеру задается текст для окна и после него начинается | продолжается игра игра
     /// </summary>
     public void TimerTextForGoGame()
@@ -225,7 +255,7 @@ public class ScreensaverLevel : MonoBehaviour
     public void CreateEnemiesDependingLevel()
     {
         if (CurrentLevel == 1) CreateZombiePrefab();
-        if (CurrentLevel == 2) CreateZombiePrefab();
+        if (CurrentLevel == 2) CreateSpiderPrefab();
 
     }
 }
