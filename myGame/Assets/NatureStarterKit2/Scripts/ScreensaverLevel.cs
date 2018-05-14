@@ -59,7 +59,7 @@ public class ScreensaverLevel : MonoBehaviour
     /// <summary>
     /// кол-во врагов
     /// </summary>
-    public static int CountEnemiesPrefab = 10;
+    public static int CountEnemiesPrefab = 3;
 
     /// <summary>
     /// превфаб зомби
@@ -179,8 +179,8 @@ public class ScreensaverLevel : MonoBehaviour
     /// </summary>
     public void CreateZombiePrefab()
     {
-        int temp = 0;
-        while (temp <= CountEnemiesPrefab)
+        int temp = 1;
+        while (temp < CountEnemiesPrefab)
         {
             ZombieObject.SetActive(true);
             Rigidbody ZombieClone = Instantiate(ZombiePrefab, new Vector3(Random.Range(-60f, 70f), 1, Random.Range(-70f, 60f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
@@ -194,10 +194,8 @@ public class ScreensaverLevel : MonoBehaviour
     /// </summary>
     public void CreateSpiderPrefab()
     {
-        float b = SaveSettings._selectedVolume;
-
-        int temp = 0;
-        while (temp <= CountEnemiesPrefab)
+        int temp = 1;
+        while (temp < CountEnemiesPrefab)
         {
             SpiderObject.SetActive(true);
             Rigidbody SpiderClone = Instantiate(SpiderPrefab, new Vector3(Random.Range(-60f, 70f), 1, Random.Range(-70f, 60f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
@@ -254,6 +252,8 @@ public class ScreensaverLevel : MonoBehaviour
     /// </summary>
     public void CreateEnemiesDependingLevel()
     {
+        CountEnemiesPrefab *= SaveSettings._selectedComplexity;
+
         if (CurrentLevel == 1) CreateZombiePrefab();
         if (CurrentLevel == 2) CreateSpiderPrefab();
 

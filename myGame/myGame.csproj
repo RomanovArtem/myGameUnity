@@ -248,12 +248,15 @@
     <Compile Include="Assets\NatureStarterKit2\Scripts\HealthTriggerUI.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\MainMenu.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\mouse.cs" />
+    <Compile Include="Assets\NatureStarterKit2\Scripts\MusicGame.cs" />
+    <Compile Include="Assets\NatureStarterKit2\Scripts\MusicMenu.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\NavMesh.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\SaveSettings.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\ScreensaverLevel.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\ShootHelper.cs" />
+    <Compile Include="Assets\NatureStarterKit2\Scripts\VolumePause.cs" />
     <Compile Include="Assets\NatureStarterKit2\Scripts\WeaponScript.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />

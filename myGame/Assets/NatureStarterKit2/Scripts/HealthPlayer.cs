@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthPlayer    : MonoBehaviour
+public class HealthPlayer : MonoBehaviour
 {
     /// <summary>
     /// здоровье персонажа
     /// </summary>
-    public int _health;
+    public float _health;
     /// <summary>
     /// слайдер 
     /// </summary>
@@ -21,7 +21,8 @@ public class HealthPlayer    : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        _health = SaveSettings._selectedStartHP;
+        _slider.maxValue = _health;
     }
 
     // Update is called once per frame

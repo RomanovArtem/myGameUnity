@@ -58,6 +58,8 @@ public class SaveSettings : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        _volumeSlider.value = _selectedVolume;
+        _startHPSlider.value = _selectedStartHP;
     }
 
     // Update is called once per frame

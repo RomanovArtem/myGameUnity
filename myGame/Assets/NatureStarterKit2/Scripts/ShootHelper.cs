@@ -35,7 +35,7 @@ public class ShootHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_shootLightTime > 0)
+        if (_shootLightTime > 0)
         {
             _shootLightTime -= 0.1f;
             _shootLight.SetActive(false);
@@ -61,7 +61,11 @@ public class ShootHelper : MonoBehaviour
                 }
             }
 
-            ammoPlayer.NumberBulletsInStore--;
+            ///если не активировали бесконечные патроны
+            if (!SaveSettings._selectedInfiniteAmmo)
+            {
+                ammoPlayer.NumberBulletsInStore--;
+            }
         }
     }
 }
