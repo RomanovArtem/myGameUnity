@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/MyGameUnity/myGame/exe/killZombies.exe
+D:/MyGameUnity/myGame/exe/Finish Him.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/GameWorld.unity
@@ -27,6 +27,7 @@ f22357a629948725163e0f7da117fe9b Assembly-CSharp.dll:UnityStandardAssets.Charact
 23b50ef73e2c1a8a76860d35bcbbf8fc Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.GlobalFog
 daabd8d8800a87cff11f866c4d06a232 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.ContrastStretch
 31ac2865258ddbc8f82525645ca875c2 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration
+51b4478928514fea67e0d4240ea079bb Assembly-CSharp.dll:.VolumePause
 1ad999c1c59cc66b1257b3f9407287bc Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.ColorCorrectionCurves
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -60,7 +61,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-6b828d81ac284a72ef4c55bb65fd9b5d Assembly-CSharp.dll:.ScreensaverLevel
+08c523902eb15e496516c969df7b150a Assembly-CSharp.dll:.ScreensaverLevel
 8e9f5b922979e9356a11d2ee2b32ee60 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -198,6 +199,7 @@ a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp.dll:UnityStandardAssets.CrossPl
 83877f03b51b3b13fa0d6c51291e0575 Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.HeadBob
 dad1c1272dfe1898bb613dcb2631bcce Assembly-CSharp.dll:TMPro.Examples.Benchmark02
 a90e94673f50d2237c1b971c138660c6 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMoveAndRotate
+adc0043c0d5439e7042a1c88a41d2444 Assembly-CSharp.dll:.MusicMenu
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ForcedReset
 57fde8e76fc7bce23deb0e799d336be7 Assembly-CSharp.dll:UnityStandardAssets.Utility.SmoothFollow
 05524b8f659e7bfe5756d1335fec24ba TextMeshPro-2017.3-1.0.56-Editor.dll:TMPro.EditorUtilities.DropdownEditor
@@ -221,11 +223,12 @@ cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp.dll:UnityStandardAssets.ImageEf
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TeleType
-4a75fd1506669fb43bc2ab7dd7b9fbc7 Assembly-CSharp.dll:.HealthEnemy
+e7cc0c6c7338f8966fb744b37c41fc30 Assembly-CSharp.dll:.HealthEnemy
 438f10b03428d8c37c31b4d0cf6d3fb9 Assembly-CSharp.dll:.SaveSettings
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityStandardAssets.Utility.ObjectResetter
-0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.NavMesh
+9e134144d6b909c7c327806c2ceaeff8 Assembly-CSharp.dll:.MusicGame
+e3730190a96f12144e205ee230ac14a0 Assembly-CSharp.dll:.NavMesh
 30db6bf1abfbd17c6cdd1385b9eba6ca Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.DepthOfField
 8a50d3d11bf0cc541f5c35347dd25633 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.PostEffectsHelper
@@ -278,7 +281,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 b16bce1340203b7a9ab9520cab8a5c89 Assembly-CSharp.dll:.HealthTriggerUI
 1cd4893b18ef6c9e1612214d23ea08a3 Assembly-CSharp.dll:.ChatController
-cc75effd8224493234e061ac8e78d928 Assembly-CSharp.dll:.HealthPlayer
+c895deef2a72647ac9cc87b9f78577c7 Assembly-CSharp.dll:.HealthPlayer
 67af8340ec9c081c037c8aa5c753ce0a Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.ColorCorrectionRamp
 4cf1ceae9881e3ae26ab45745f3aa417 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.Grayscale
 c08b196716247885d3b27f7f282b2568 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.SepiaTone
@@ -309,6 +312,3 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp.dll:UnityStandardAssets.ImageEf
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-adc0043c0d5439e7042a1c88a41d2444 Assembly-CSharp.dll:.MusicMenu
-9e134144d6b909c7c327806c2ceaeff8 Assembly-CSharp.dll:.MusicGame
-51b4478928514fea67e0d4240ea079bb Assembly-CSharp.dll:.VolumePause

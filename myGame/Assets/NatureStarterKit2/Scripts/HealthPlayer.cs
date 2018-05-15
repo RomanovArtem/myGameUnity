@@ -8,7 +8,7 @@ public class HealthPlayer : MonoBehaviour
     /// <summary>
     /// здоровье персонажа
     /// </summary>
-    public float _health;
+    public static float _health;
     /// <summary>
     /// слайдер 
     /// </summary>

@@ -92,7 +92,7 @@ public class NavMesh : MonoBehaviour
             animator.SetFloat("Directional", 1);
             if (distance <= 6 && _timer == 30)
             {
-                Player.GetComponent<HealthPlayer>()._health -= 1;
+                HealthPlayer._health -= 10;
             }
             _timer--;
             if (_timer == 0 || _timer < 0)

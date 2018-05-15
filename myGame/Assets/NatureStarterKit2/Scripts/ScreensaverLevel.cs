@@ -54,7 +54,7 @@ public class ScreensaverLevel : MonoBehaviour
     /// <summary>
     /// текущий уровень
     /// </summary>
-    public int CurrentLevel = 1;
+    public static int CurrentLevel = 1;
 
     /// <summary>
     /// кол-во врагов
@@ -80,6 +80,17 @@ public class ScreensaverLevel : MonoBehaviour
     /// объект паук
     /// </summary>
     public GameObject SpiderObject;
+
+    /// <summary>
+    /// превфаб босса
+    /// </summary>
+    public Rigidbody BossPrefab;
+
+    /// <summary>
+    /// объект босс
+    /// </summary>
+    public GameObject BossObject;
+
 
     /// <summary>
     /// кол-во убитых врагов
@@ -122,6 +133,20 @@ public class ScreensaverLevel : MonoBehaviour
             {
                 TimerText();
             }
+
+            if (CurrentLevel == 3 && CountDeadEnemies == 1)
+            {
+                DisplayCongratulationsGame();
+                StopGame();
+                IsCongratulationsMenu = true;
+            }
+            
+            if(HealthPlayer._health == 0)
+            {
+                DisplayDead();
+                StopGame();
+                IsCongratulationsMenu = true;
+            }
         }
     }
 
@@ -158,6 +183,24 @@ public class ScreensaverLevel : MonoBehaviour
     }
 
     /// <summary>
+    /// окно поздравления
+    /// </summary>
+    public void DisplayCongratulationsGame()
+    {
+        CongratulationsMenu.SetActive(true);
+        CongratulationsText.text = "Congratulations, you have passed the game!!!";
+    }
+
+    /// <summary>
+    /// окно смерти
+    /// </summary>
+    public void DisplayDead()
+    {
+        CongratulationsMenu.SetActive(true);
+        CongratulationsText.text = "Congratulations, you DEAD!!!";
+    }
+
+    /// <summary>
     /// продолжить игру
     /// </summary>
     public void GoGame()
@@ -183,10 +226,15 @@ public class ScreensaverLevel : MonoBehaviour
         while (temp < CountEnemiesPrefab)
         {
             ZombieObject.SetActive(true);
-            Rigidbody ZombieClone = Instantiate(ZombiePrefab, new Vector3(Random.Range(-60f, 70f), 1, Random.Range(-70f, 60f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
+            Rigidbody ZombieClone = Instantiate(ZombiePrefab, new Vector3(Random.Range(-13f, 20f), 1, Random.Range(0f, 39f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
             ZombieClone.velocity = new Vector3(0, 0, 1);
             temp++;
         }
+    }
+
+    public void CreateBossPrefab()
+    {
+        BossObject.SetActive(true);
     }
 
     /// <summary>
@@ -198,7 +246,7 @@ public class ScreensaverLevel : MonoBehaviour
         while (temp < CountEnemiesPrefab)
         {
             SpiderObject.SetActive(true);
-            Rigidbody SpiderClone = Instantiate(SpiderPrefab, new Vector3(Random.Range(-60f, 70f), 1, Random.Range(-70f, 60f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
+            Rigidbody SpiderClone = Instantiate(SpiderPrefab, new Vector3(Random.Range(-13f, 20f), 1, Random.Range(0f, 39f)), Quaternion.Euler(0, 0, 0)) as Rigidbody;
             SpiderClone.velocity = new Vector3(0, 0, 1);
             temp++;
         }
@@ -236,6 +284,11 @@ public class ScreensaverLevel : MonoBehaviour
         }
         if (timer < 0)
         {
+            if (CurrentLevel == 3)
+            {
+                Application.Quit();
+            }
+
             CountDeadEnemies = 0;
             CurrentLevel++;
             IsCongratulationsMenu = false;
@@ -256,6 +309,10 @@ public class ScreensaverLevel : MonoBehaviour
 
         if (CurrentLevel == 1) CreateZombiePrefab();
         if (CurrentLevel == 2) CreateSpiderPrefab();
+        if (CurrentLevel == 3)
+        {
+            CreateBossPrefab();
+        }
 
     }
 }
