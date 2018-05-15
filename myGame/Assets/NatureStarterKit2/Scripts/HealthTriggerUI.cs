@@ -28,9 +28,9 @@ public class HealthTriggerUI : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.tag == "Player")
-        {
-            collider.GetComponent<HealthPlayer>()._health -= _valueDown;
-        }
+        //if (collider.tag == "Player")
+        //{
+        //    collider.GetComponent<HealthPlayer>()._health -= _valueDown;
+        //}
     }
 }

@@ -112,7 +112,7 @@ public class ScreensaverLevel : MonoBehaviour
         }
         else
         {
-            if (CountDeadEnemies == 1 && !IsCongratulationsMenu)
+            if (CountDeadEnemies == CountEnemiesPrefab && !IsCongratulationsMenu)
             {
                 DisplayCongratulationsMenu();
                 StopGame();
@@ -154,7 +154,7 @@ public class ScreensaverLevel : MonoBehaviour
     public void DisplayCongratulationsMenu()
     {
         CongratulationsMenu.SetActive(true);
-        CongratulationsText.text = "congratulations man!";
+        CongratulationsText.text = "Congratulations!\n You have passed level " + CurrentLevel;
     }
 
     /// <summary>

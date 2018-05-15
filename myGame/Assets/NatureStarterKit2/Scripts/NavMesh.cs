@@ -7,12 +7,17 @@ using UnityEngine.AI;
 
 public class NavMesh : MonoBehaviour
 {
+    /// <summary>
+    /// типо времени, через которое заного можно будет атаковать
+    /// </summary>
+    public int _timer = 30;
 
     public Transform target; // куда будет идти враг
 
     NavMeshAgent agent = null;
     Animator animator;
 
+    public GameObject Player;
 
     /// <summary>
     /// мертв ли юнит ?
@@ -85,6 +90,15 @@ public class NavMesh : MonoBehaviour
             agent.speed = 2;
             animator.SetFloat("Speed", 5);
             animator.SetFloat("Directional", 1);
+            if (distance <= 6 && _timer == 30)
+            {
+                Player.GetComponent<HealthPlayer>()._health -= 1;
+            }
+            _timer--;
+            if (_timer == 0 || _timer < 0)
+            {
+                _timer = 30;
+            }
         }
 
         System.Diagnostics.Debug.WriteLine(distance);
